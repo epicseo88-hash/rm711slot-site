@@ -177,9 +177,50 @@ tr:nth-child(even) td { background: rgba(255, 255, 255, .02); }
 .rm711-readmore[open] > summary .rm711-more { display: none; }
 .rm711-readmore:not([open]) > summary .rm711-less { display: none; }
 
-/* logo row inside articles */
-.rm711-logo-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
-.rm711-logo-row img { height: 44px; width: auto; }
+/* ---------------------------------------------------- homepage layout */
+.rm711-video-section { text-align: center; margin-bottom: 44px; }
+.rm711-section-title { color: var(--gold-soft); text-align: center; border: 0; }
+.rm711-video-container {
+  max-width: 640px; margin: 18px auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line);
+}
+.rm711-video-container iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.rm711-footer-inner {
+  max-width: var(--wrap); margin: 0 auto;
+  display: flex; flex-direction: column; gap: 22px;
+}
+
+/* ambassador: portrait beside text, not a full-width square */
+.rm711-ambassador-top { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.rm711-ambassador-top > img {
+  width: 180px; height: 180px; object-fit: cover;
+  border-radius: 12px; flex-shrink: 0; border: 1px solid var(--line);
+}
+.rm711-ambassador-top > div { flex: 1; min-width: 240px; }
+
+/* payment / certificate strips: wide banners, fit the card */
+.rm711-logo-row { margin: 6px 0; }
+.rm711-logo-row img { width: 100%; max-width: 560px; height: auto; }
+
+.rm711-social-icons { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.rm711-social-icons img { width: 38px; height: 38px; object-fit: contain; }
+
+/* footer link columns */
+.rm711-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+.rm711-links ul { list-style: none; padding-left: 0; margin: 0; }
+.rm711-links li { margin-bottom: 8px; }
+
+/* contact + map */
+.rm711-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.rm711-map iframe { width: 100%; min-height: 260px; border: 0; border-radius: var(--radius); display: block; }
+@media (max-width: 760px) { .rm711-contact-grid { grid-template-columns: 1fr; } }
+
+.rm711-copyright {
+  text-align: center; color: var(--muted); font-size: 14px;
+  padding-top: 22px; margin-top: 6px; border-top: 1px solid var(--line);
+}
 
 /* --------------------------------------------------------- blog index */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; margin-top: 36px; }
