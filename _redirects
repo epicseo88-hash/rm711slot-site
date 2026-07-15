@@ -1,0 +1,11 @@
+# Cloudflare Pages redirects. Clean URLs are automatic.
+/blog            /slot-malaysia                                  301
+/promotion       /711cuci-malaysia-guide                         301
+/promo           /711cuci-malaysia-guide                         301
+/login           /slot-malaysia-mega888-login-problem-fix-guide  301
+/register        /how-to-register                                301
+/register/*      /how-to-register                                301
+/t&c             /terms-and-conditions                           301
+
+/gameList/*      https://jadiking.my/RF12011805                  302
+/RF*             https://jadiking.my/RF12011805                  302
