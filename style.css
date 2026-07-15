@@ -168,6 +168,15 @@ tr:nth-child(even) td { background: rgba(255, 255, 255, .02); }
 .read-more:not([href]) { display: none; }
 .more-content { margin-top: 8px; display: block !important; }
 
+/* collapsible "Read More" details: open by default, styled summary toggle */
+.rm711-readmore > summary {
+  cursor: pointer; list-style: none;
+  color: var(--gold); font-weight: 600; margin: 8px 0;
+}
+.rm711-readmore > summary::-webkit-details-marker { display: none; }
+.rm711-readmore[open] > summary .rm711-more { display: none; }
+.rm711-readmore:not([open]) > summary .rm711-less { display: none; }
+
 /* logo row inside articles */
 .rm711-logo-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
 .rm711-logo-row img { height: 44px; width: auto; }
